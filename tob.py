@@ -1,8 +1,9 @@
 import os
 import random
-import time
+invoption_text = ("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
 
-def main():
+def main(i=0):
+    invoption = i
     print("\033[1;33m\n   ooooooooooooo   .oooooo.   oooooooooo. ")
     print("\033[1;33m   8'   888   `8  d8P'  `Y8b  `888'   `Y8b ")
     print("\033[1;33m        888      888      888  888     888 ")
@@ -19,14 +20,15 @@ def main():
     print("2) DECRYPT")
     print("3) GEN KEY")
     print("\n99) EXIT\n")
+    if (invoption == 1):
+        print(invoption_text)
     option = int(input("\nSelect: "))
     if (option == 1):
         print("IN PROGRESS\n")
     elif (option == 2):
         print("IN PROGRESS\n")
     elif (option ==3):
-        #---------------------# key gen
-        def gen_key():
+        def gen_key(): #-------------# gen key
             os.system("clear")
             random.seed()
             key = random.randrange(000000000000000000000000, 999999999999999999999999)
@@ -53,8 +55,6 @@ def main():
     elif (option == 99):
         print("\033[1;36mBye...\033[0;0m\n")
     else:
-        print("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
-        time.sleep(0.5)
-        main()
+        main(i=1)
 #---------------------# start
 main() 
