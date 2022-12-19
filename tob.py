@@ -1,3 +1,7 @@
+import os
+import random
+import time
+
 def main():
     print("\033[1;33m\n   ooooooooooooo   .oooooo.   oooooooooo. ")
     print("\033[1;33m   8'   888   `8  d8P'  `Y8b  `888'   `Y8b ")
@@ -20,4 +24,37 @@ def main():
         print("IN PROGRESS\n")
     elif (option == 2):
         print("IN PROGRESS\n")
-main()
+    elif (option ==3):
+        #---------------------# key gen
+        def gen_key():
+            os.system("clear")
+            random.seed()
+            key = random.randrange(000000000000000000000000, 999999999999999999999999)
+            print("\033[1;97m\n\n              8 8 8 8                     ,ooo.     ")
+            print("              8a8 8a8                    oP   ?b    ")
+            print("             d888a888zzzzzzzzzzzzzzzzzzzz8     8b   ")
+            print("              `ii^ii'                    ?o___oP'   \033[0;0m")
+            print("\033[1;32m\n       +--------------------------------------------+")
+            print(" \033[1;32m\n       |\033[0;0m  YOUR KEY IS : {}    \033[1;32m|\n".format(key))
+            print("       +--------------------------------------------+\033[0;0m\n")
+            print("\n1) Back")
+            print("2) ReGen")
+            print("\n99) Exit\n")
+            option = int(input("\nSelect: "))
+            if (option == 1):
+                main()
+            elif (option == 2):
+                gen_key()
+            elif (option == 99):
+                print("\033[1;36mBye...\033[0;0m\n")
+            else:
+                print("\033[1;36mExit. Bye...\033[0;0m\n") 
+        gen_key()
+    elif (option == 99):
+        print("\033[1;36mBye...\033[0;0m\n")
+    else:
+        print("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
+        time.sleep(0.5)
+        main()
+#---------------------# start
+main() 
