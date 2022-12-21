@@ -48,7 +48,7 @@ def main(i=0):
                 result = ""
                 for char in text:
                     char_code = ord(char)
-                    decrypted_code = char_code - key
+                    decrypted_code = char_code - key #convert back to char
                     decrypted_char = chr(decrypted_code)
                     result += decrypted_char
                 return result
