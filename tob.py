@@ -32,9 +32,8 @@ def main(i=0):
             def encrypt(text, key):
                 result= ""
                 for char in text:
-                    char_code = ord(char)
-                    encrypt_code = char_code + key
-                    #convert back to char
+                    char_code = ord(char) #get ascii value
+                    encrypt_code = char_code + key #convert back to char
                     encrypted_char = chr(encrypt_code)
                     result += encrypted_char
                 return result
@@ -47,7 +46,7 @@ def main(i=0):
             def decrypt(text, key):
                 result = ""
                 for char in text:
-                    char_code = ord(char)
+                    char_code = ord(char) #get ascii value
                     decrypted_code = char_code - key #convert back to char
                     decrypted_char = chr(decrypted_code)
                     result += decrypted_char
