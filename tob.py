@@ -2,6 +2,7 @@ import os
 import random
 import time
 invoption_text = ("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
+invkey_text = ("\n\033[;1m\x1b[31m This key is not valid...\033[0;0m")
 
 def main(i=0):
     try:
@@ -28,31 +29,54 @@ def main(i=0):
             print(invoption_text)
         option = (input("\nSelect: "))
         if (option == '1'):
-            def encrypt(text, key):
-                result= ""
-                for char in text:
-                    char_code = ord(char) #get ascii value
-                    encrypt_code = char_code + key #convert back to char
-                    encrypted_char = chr(encrypt_code)
-                    result += encrypted_char
-                return result
-            print("\n      .--------.")
-            print("     / .------. 1")
-            print("    / /        \ 1")
-            print("    | |        | |")
-            print("   _| |________| |_")
-            print(" .' |_|        |_| '.")
-            print(" '._____ ____ _____.'")
-            print(" |     .'____'.     |")
-            print(" '.__.'.'    '.'.__.'")
-            print(" '.__  | CTOB |  __.'")
-            print(" |   '.'.____.'.'   |")
-            print(" '.____'.____.'____.'")
-            print(" '.________________.'")
-            text = (input("\nInput Text: "))
-            key = int(input("Input your KEY: "))
-            encrypted_text = encrypt(text, key)
-            print("\nEncrypted text:{0}".format(encrypted_text))
+            os.system("clear")
+            def cript(ik=0):
+                invkey=ik
+                def encrypt(text, key):
+                    result= ""
+                    for char in text:
+                        char_code = ord(char) #get ascii value
+                        encrypt_code = char_code + key #convert back to char
+                        encrypted_char = chr(encrypt_code)
+                        result += encrypted_char
+                    return result
+                print("\n      .--------.")
+                print("     / .------. 1")
+                print("    / /        \ 1")
+                print("    | |        | |")
+                print("   _| |________| |_")
+                print(" .' |_|        |_| '.")
+                print(" '._____ ____ _____.'")
+                print(" |     .'____'.     |")
+                print(" '.__.'.'    '.'.__.'")
+                print(" '.__  | CTOB |  __.'")
+                print(" |   '.'.____.'.'   |")
+                print(" '.____'.____.'____.'")
+                print(" '.________________.'")
+                if (invkey == 1):
+                    print(invkey_text)
+                text = (input("\nInput Text: "))
+                try:
+                    key = int(input("Input your KEY: "))
+                except Exception as e:
+                    cript(ik=1)                
+                encrypted_text = encrypt(text, key)
+                print("\nEncrypted text:{0}".format(encrypted_text))
+                def cript_menu(i=0):
+                    invoption=i
+                    print("\n1) Back")
+                    print("\n99) Exit\n")
+                    if (invoption == 1):
+                        print(invoption_text)
+                    option = (input("\nSelect: "))
+                    if (option == '1'):
+                        main()
+                    elif option == '99'or option == 'exit' or option == 'quit':
+                        print("\033[1;36mBye...\033[0;0m\n")
+                    else:
+                        cript_menu(i=1)
+                cript_menu()
+            cript()
         elif (option == '2'):
             print("IN PROGRESS\n")
             def decrypt(text, key):
