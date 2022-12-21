@@ -30,7 +30,7 @@ def main(i=0):
         if (option == '1'):
             print("IN PROGRESS\n")
             def encrypt(text, key):
-                result= " "
+                result= ""
                 for char in text:
                     char_code = ord(char)
                     encrypt_code = char_code + key
@@ -44,6 +44,18 @@ def main(i=0):
             print("\nEncrypted text:{0}".format(encrypted_text))
         elif (option == '2'):
             print("IN PROGRESS\n")
+            def decrypt(text, key):
+                result = ""
+                for char in text:
+                    char_code = ord(char)
+                    decrypted_code = char_code - key
+                    decrypted_char = chr(decrypted_code)
+                    result += decrypted_char
+                return result
+            text = (input("\nInput Text: "))
+            key = int(input("Input your KEY: "))
+            decrypted_text = decrypt(text, key)
+            print("\nDecrypted text:{0}".format(decrypted_text))
         elif (option =='3'):
             def gen_key(i=0): #------------# gen key
                 os.system("clear")
