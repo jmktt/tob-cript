@@ -59,6 +59,7 @@ def main(i=0):
                 try:
                     key = int(input("Input your KEY: "))
                 except Exception as e:
+                    os.system("clear")
                     cript(ik=1)                
                 encrypted_text = encrypt(text, key)
                 print("\nEncrypted text:{0}".format(encrypted_text))
