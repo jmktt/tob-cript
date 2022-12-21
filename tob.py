@@ -35,9 +35,9 @@ def main(i=0):
                 def encrypt(text, key):
                     result= ""
                     for char in text:
-                        char_code = ord(char) #get ascii value
+                        char_code = ord(char)
                         key = key % 10000
-                        encrypt_code = char_code + key #convert back to char
+                        encrypt_code = char_code + key
                         encrypted_char = chr(encrypt_code)
                         result += encrypted_char
                     return result
@@ -80,7 +80,6 @@ def main(i=0):
                 cript_menu()
             cript()
         elif (option == '2'):
-            print("IN PROGRESS\n")
             def decrypt(text, key):
                 result = ""
                 for char in text:
@@ -90,6 +89,21 @@ def main(i=0):
                     decrypted_char = chr(decrypted_code)
                     result += decrypted_char
                 return result
+            print("\n      .--------.")
+            print("     / .------. 1")
+            print("    / /        \ 1")
+            print("    | |        | |")
+            print("    | |        | |")
+            print("    | |        --- ")
+            print("   _| |____________")
+            print(" .' |_|            '.")
+            print(" '._____ ____ _____.'")
+            print(" |     .'____'.     |")
+            print(" '.__.'.'    '.'.__.'")
+            print(" '.__  | DTOB |  __.'")
+            print(" |   '.'.____.'.'   |")
+            print(" '.____'.____.'____.'")
+            print(" '.________________.'")
             text = (input("\nInput Text: "))
             key = int(input("Input your KEY: "))
             decrypted_text = decrypt(text, key)
