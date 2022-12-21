@@ -28,7 +28,6 @@ def main(i=0):
             print(invoption_text)
         option = (input("\nSelect: "))
         if (option == '1'):
-            print("IN PROGRESS\n")
             def encrypt(text, key):
                 result= ""
                 for char in text:
@@ -37,6 +36,19 @@ def main(i=0):
                     encrypted_char = chr(encrypt_code)
                     result += encrypted_char
                 return result
+            print("\n      .--------.")
+            print("     / .------. 1")
+            print("    / /        \ 1")
+            print("    | |        | |")
+            print("   _| |________| |_")
+            print(" .' |_|        |_| '.")
+            print(" '._____ ____ _____.'")
+            print(" |     .'____'.     |")
+            print(" '.__.'.'    '.'.__.'")
+            print(" '.__  | CTOB |  __.'")
+            print(" |   '.'.____.'.'   |")
+            print(" '.____'.____.'____.'")
+            print(" '.________________.'")
             text = (input("\nInput Text: "))
             key = int(input("Input your KEY: "))
             encrypted_text = encrypt(text, key)
