@@ -29,16 +29,17 @@ def main(i=0):
             print(invoption_text)
         option = (input("\nSelect: "))
         if (option == '1'):
+        # option 1 - CRIPT
             os.system("clear")
             def cript(ik=0):
                 invkey=ik
                 def encrypt(text, key):
                     result= ""
                     for char in text:
-                        char_code = ord(char)
+                        char_code = ord(char) # get ascii value
                         key = key % 10000
                         encrypt_code = char_code + key
-                        encrypted_char = chr(encrypt_code)
+                        encrypted_char = chr(encrypt_code) # covert back to char
                         result += encrypted_char
                     return result
                 print("\n      .--------.")
@@ -64,6 +65,7 @@ def main(i=0):
                     cript(ik=1)                
                 encrypted_text = encrypt(text, key)
                 print("\nEncrypted text:{0}".format(encrypted_text))
+                # CRIPT SUB MENU
                 def cript_menu(i=0):
                     invoption=i
                     print("\n1) Back")
@@ -80,36 +82,63 @@ def main(i=0):
                 cript_menu()
             cript()
         elif (option == '2'):
-            def decrypt(text, key):
-                result = ""
-                for char in text:
-                    char_code = ord(char) #get ascii value
-                    key = key % 10000
-                    decrypted_code = char_code - key #convert back to char
-                    decrypted_char = chr(decrypted_code)
-                    result += decrypted_char
-                return result
-            print("\n      .--------.")
-            print("     / .------. 1")
-            print("    / /        \ 1")
-            print("    | |        | |")
-            print("    | |        | |")
-            print("    | |        --- ")
-            print("   _| |____________")
-            print(" .' |_|            '.")
-            print(" '._____ ____ _____.'")
-            print(" |     .'____'.     |")
-            print(" '.__.'.'    '.'.__.'")
-            print(" '.__  | DTOB |  __.'")
-            print(" |   '.'.____.'.'   |")
-            print(" '.____'.____.'____.'")
-            print(" '.________________.'")
-            text = (input("\nInput Text: "))
-            key = int(input("Input your KEY: "))
-            decrypted_text = decrypt(text, key)
-            print("\nDecrypted text:{0}".format(decrypted_text))
+        # option 2 - DECRIPT
+            def decript(ik=0):
+                os.system("clear")
+                invkey=ik
+                def decrypt(text, key):
+                    result = ""
+                    for char in text:
+                        char_code = ord(char) #get ascii value
+                        key = key % 10000
+                        decrypted_code = char_code - key 
+                        decrypted_char = chr(decrypted_code) #covert back to char
+                        result += decrypted_char
+                    return result
+                print("\n      .--------.")
+                print("     / .------. 1")
+                print("    / /        \ 1")
+                print("    | |        | |")
+                print("    | |        | |")
+                print("    | |        --- ")
+                print("   _| |____________")
+                print(" .' |_|            '.")
+                print(" '._____ ____ _____.'")
+                print(" |     .'____'.     |")
+                print(" '.__.'.'    '.'.__.'")
+                print(" '.__  | DTOB |  __.'")
+                print(" |   '.'.____.'.'   |")
+                print(" '.____'.____.'____.'")
+                print(" '.________________.'")
+                if (invkey == 1):
+                    print(invkey_text)
+                text = (input("\nInput Text: "))
+                try:
+                    key = int(input("Input your KEY: "))
+                except Exception as e:
+                    os.system("clear")
+                    decript(ik=1)                           
+                decrypted_text = decrypt(text, key)
+                print("\nDecrypted text:{0}".format(decrypted_text))
+                # DECRIPT SUB MENU
+                def decript_menu(i=0):
+                    invoption=i
+                    print("\n1) Back")
+                    print("\n99) Exit\n")
+                    if (invoption == 1):
+                        print(invoption_text)
+                    option = (input("\nSelect: "))
+                    if (option == '1'):
+                        main()
+                    elif option == '99'or option == 'exit' or option == 'quit':
+                        print("\033[1;36mBye...\033[0;0m\n")
+                    else:
+                        decript_menu(i=1)
+                decript_menu()
+            decript()
         elif (option =='3'):
-            def gen_key(i=0): #------------# gen key
+        # option 3 - GENERATE KEY
+            def gen_key(i=0):
                 os.system("clear")
                 invoption = i
                 random.seed()
@@ -124,6 +153,7 @@ def main(i=0):
                 print("\n1) Back")
                 print("2) ReGen")
                 print("\n99) Exit\n")
+                #keygen sub menu
                 if (invoption == 1):
                     print(invoption_text)
                 option = (input("\nSelect: "))
