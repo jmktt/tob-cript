@@ -3,8 +3,6 @@ import random
 import time
 invoption_text = ("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
 invkey_text = ("\n\033[;1m\x1b[31m This key is not valid...\033[0;0m")
-def key_calc(key):
-    key=key % 10000
 
 def main(i=0):
     try:
