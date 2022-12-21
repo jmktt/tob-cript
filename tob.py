@@ -3,6 +3,8 @@ import random
 import time
 invoption_text = ("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
 invkey_text = ("\n\033[;1m\x1b[31m This key is not valid...\033[0;0m")
+def key_calc(key):
+    key=key % 10000
 
 def main(i=0):
     try:
@@ -36,6 +38,7 @@ def main(i=0):
                     result= ""
                     for char in text:
                         char_code = ord(char) #get ascii value
+                        key = key % 10000
                         encrypt_code = char_code + key #convert back to char
                         encrypted_char = chr(encrypt_code)
                         result += encrypted_char
@@ -84,6 +87,7 @@ def main(i=0):
                 result = ""
                 for char in text:
                     char_code = ord(char) #get ascii value
+                    key = key % 10000
                     decrypted_code = char_code - key #convert back to char
                     decrypted_char = chr(decrypted_code)
                     result += decrypted_char
