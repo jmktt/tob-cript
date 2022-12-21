@@ -10,7 +10,7 @@ def main(i=0):
         print("\033[1;33m\n   ooooooooooooo   .oooooo.   oooooooooo. ")
         print("\033[1;33m   8'   888   `8  d8P'  `Y8b  `888'   `Y8b ")
         print("\033[1;33m        888      888      888  888     888 ")
-        print("\033[1;33m        888      888      888  888oooo888' ") 
+        print("\033[1;33m        888      888      888  888oooo888' ")
         print("\033[1;33m        888      888      888  888    `88b ")
         print("\033[1;33m        888      888      888  888    `88b ")
         print("\033[1;33m        888      `88b    d88'  888    .88P ")
@@ -29,6 +29,19 @@ def main(i=0):
         option = (input("\nSelect: "))
         if (option == '1'):
             print("IN PROGRESS\n")
+            def encrypt(text, key):
+                result= " "
+                for char in text:
+                    char_code = ord(char)
+                    encrypt_code = char_code + key
+                    #convert back to char
+                    encrypted_char = chr(encrypt_code)
+                    result += encrypted_char
+                return result
+            text = (input("\nInput Text: "))
+            key = int(input("Input your KEY: "))
+            encrypted_text = encrypt(text, key)
+            print("\nEncrypted text:{0}".format(encrypted_text))
         elif (option == '2'):
             print("IN PROGRESS\n")
         elif (option =='3'):
