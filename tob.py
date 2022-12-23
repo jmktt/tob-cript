@@ -1,6 +1,5 @@
 import os
 import random
-import time
 from src.core.tobcore import *
 operating_system = check_os()
 invoption_text = ("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
