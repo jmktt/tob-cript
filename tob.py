@@ -9,9 +9,9 @@ invkey_text = ("\n\033[;1m\x1b[31m This key is not valid...\033[0;0m")
 def main(i=0):
     try:
         invoption = i
-        if (operating_system == "posix"):
+        if (operating_system == "1"):
             os.system("clear")
-        elif (operating_system == "windows"):
+        elif (operating_system == "0"):
             os.system("cls")
         else:
             print("[!]UNIDENTIFIED OS")
@@ -37,7 +37,12 @@ def main(i=0):
         option = (input("\nSelect: "))
         if (option == '1'):
         # option 1 - CRIPT
-            os.system("clear")
+            if (operating_system == "1"):
+                os.system("clear")
+            elif (operating_system == "0"):
+                os.system("cls")
+            else:
+                print("[!]UNIDENTIFIED OS")
             def cript(ik=0):
                 invkey=ik
                 def encrypt(text, key):
@@ -68,7 +73,12 @@ def main(i=0):
                 try:
                     key = int(input("Input your KEY: "))
                 except Exception as e:
-                    os.system("clear")
+                    if (operating_system == "1"):
+                        os.system("clear")
+                    elif (operating_system == "0"):
+                        os.system("cls")
+                    else:
+                        print("[!]UNIDENTIFIED OS")
                     cript(ik=1)                
                 encrypted_text = encrypt(text, key)
                 print("\nEncrypted text:{0}".format(encrypted_text))
@@ -91,7 +101,12 @@ def main(i=0):
         elif (option == '2'):
         # option 2 - DECRIPT
             def decript(ik=0):
-                os.system("clear")
+                if (operating_system == "1"):
+                    os.system("clear")
+                elif (operating_system == "0"):
+                    os.system("cls")
+                else:
+                    print("[!]UNIDENTIFIED OS")
                 invkey=ik
                 def decrypt(text, key):
                     result = ""
@@ -123,7 +138,12 @@ def main(i=0):
                 try:
                     key = int(input("Input your KEY: "))
                 except Exception as e:
-                    os.system("clear")
+                    if (operating_system == "1"):
+                        os.system("clear")
+                    elif (operating_system == "0"):
+                        os.system("cls")
+                    else:
+                        print("[!]UNIDENTIFIED OS")
                     decript(ik=1)                           
                 decrypted_text = decrypt(text, key)
                 print("\nDecrypted text:{0}".format(decrypted_text))
@@ -146,7 +166,12 @@ def main(i=0):
         elif (option =='3'):
         # option 3 - GENERATE KEY
             def gen_key(i=0):
-                os.system("clear")
+                if (operating_system == "1"):
+                    os.system("clear")
+                elif (operating_system == "0"):
+                    os.system("cls")
+                else:
+                    print("[!]UNIDENTIFIED OS")
                 invoption = i
                 random.seed()
                 key = random.randrange(000000000000000000000000, 999999999999999999999999)
