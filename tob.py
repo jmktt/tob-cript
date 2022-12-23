@@ -14,7 +14,7 @@ def main(i=0):
             os.system("cls")
         else:
             print("[!]UNIDENTIFIED OS")
-        print("\033[1;33m\n   ooooooooooooo   .oooooo.   oooooooooo. ")
+        print(bcolors.YELLOW+"\n   ooooooooooooo   .oooooo.   oooooooooo. ")
         print("   8'   888   `8  d8P'  `Y8b  `888'   `Y8b ")
         print("        888      888      888  888     888 ")
         print("        888      888      888  888oooo888' ")
