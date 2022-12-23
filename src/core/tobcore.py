@@ -8,3 +8,4 @@ def check_os():
 
 class bcolors:
     YELLOW = '\033[1;33m'
+    RESET = '\033[0;0m'

@@ -21,7 +21,7 @@ def main(i=0):
         print("        888      888      888  888    `88b ")
         print("        888      888      888  888    `88b ")
         print("        888      `88b    d88'  888    .88P ")
-        print("       o888o      `Y8bood8P'  o888bood8P'  \033[0;0m")
+        print("       o888o      `Y8bood8P'  o888bood8P'  "+bcolors.RESET)
         print("\n\033[1;34m[---]    Text-Object Basic Cript (\033[1;33mTOB\033[1;34m).   [---]\033[0;0m")
         print("\033[1;34m[---]          Created by: \033[1;31mJMKTT\033[1;34m          [---]\033[0;0m")
         print("\033[1;34m[---]            Version: \033[1;31m 1.2 \033[0;0m \033[1;34m          [---] \n")
