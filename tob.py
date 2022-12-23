@@ -1,13 +1,20 @@
 import os
 import random
 import time
+from tobcore import check_os
+operating_system = check_os()
 invoption_text = ("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
 invkey_text = ("\n\033[;1m\x1b[31m This key is not valid...\033[0;0m")
 
 def main(i=0):
     try:
-        os.system("clear")
         invoption = i
+        if (operating_system == "posix"):
+            os.system("clear")
+        elif (operating_system == "windows"):
+            os.system("cls")
+        else:
+            print("[!]UNIDENTIFIED OS")
         print("\033[1;33m\n   ooooooooooooo   .oooooo.   oooooooooo. ")
         print("\033[1;33m   8'   888   `8  d8P'  `Y8b  `888'   `Y8b ")
         print("\033[1;33m        888      888      888  888     888 ")
