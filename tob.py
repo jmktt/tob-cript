@@ -90,7 +90,7 @@ def main(i=0):
                     if (option == '1'):
                         main()
                     elif option == '99'or option == 'exit' or option == 'quit':
-                        print("\033[1;36mBye...\033[0;0m\n")
+                        print("\033[1;36mBye...\n"+bcolors.RESET)
                     else:
                         cript_menu(i=1)
                 cript_menu()
@@ -155,7 +155,7 @@ def main(i=0):
                     if (option == '1'):
                         main()
                     elif option == '99'or option == 'exit' or option == 'quit':
-                        print("\033[1;36mBye...\033[0;0m\n")
+                        print("\033[1;36mBye...\n"+bcolors.RESET)
                     else:
                         decript_menu(i=1)
                 decript_menu()
@@ -191,12 +191,12 @@ def main(i=0):
                 elif (option == '2'):
                     gen_key(i=0)
                 elif option == '99'or option == 'exit' or option == 'quit':
-                    print("\033[1;36mBye...\033[0;0m\n")
+                    print("\033[1;36mBye...\n"+bcolors.RESET)
                 else:
                     gen_key(i=1) 
             gen_key()
         elif option == '99'or option == 'exit' or option == 'quit':
-            print("\033[1;36mBye...\033[0;0m\n")
+            print("\033[1;36mBye...\n"+bcolors.RESET)
         else:
             main(i=1)
     except KeyboardInterrupt:
