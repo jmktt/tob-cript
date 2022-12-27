@@ -1,4 +1,6 @@
 import os
+import datetime
+
 def check_os():
     if os.name == "nt": #windows
         operating_system = "0"
@@ -10,9 +12,10 @@ class bcolors:
     YELLOW = '\033[1;33m'
     RESET = '\033[0;0m'
 
+now = datetime.datetime.now()
 def write(encrypted_text):
     w = open("criptout.txt", "a")
-    w.write("\n Cript Text: {0}".format(encrypted_text))
+    w.write("\n Cript Text({0}): {1}".format(now,encrypted_text))
     w.close()
 
 
