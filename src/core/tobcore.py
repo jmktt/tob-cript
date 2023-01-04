@@ -70,7 +70,7 @@ key_banner='''
              d888a888zzzzzzzzzzzzzzzzzzzz8     8b   
               `ii^ii'                    ?o___oP'  
 '''
-
+tname = Colorate.Horizontal(Colors.yellow_to_red, "TOB",1)
 cname = Colorate.Horizontal(Colors.red_to_blue, "JMKTT",1)
 version= Colorate.Horizontal(Colors.red_to_blue, "1.2",1)
 ### invalid mansages
