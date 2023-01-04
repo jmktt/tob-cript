@@ -1,6 +1,7 @@
 import os
 import random
 from src.core.tobcore import *
+from pystyle import Colors, Colorate, Write,Add
 operating_system = check_os()
 
 def main(i=0):
@@ -12,19 +13,12 @@ def main(i=0):
             os.system("cls")
         else:
             print("[!]UNIDENTIFIED OS")
-        print(bcolors.YELLOW+"\n   ooooooooooooo   .oooooo.   oooooooooo. ")
-        print("   8'   888   `8  d8P'  `Y8b  `888'   `Y8b ")
-        print("        888      888      888  888     888 ")
-        print("        888      888      888  888oooo888' ")
-        print("        888      888      888  888    `88b ")
-        print("        888      888      888  888    `88b ")
-        print("        888      `88b    d88'  888    .88P ")
-        print("       o888o      `Y8bood8P'  o888bood8P'  "+bcolors.RESET)
+        print(Colorate.Vertical(Colors.yellow_to_red, "{}".format(menu_banner), 1))
         print("\n\033[1;34m[---]    Text-Object Basic Cript (\033[1;33mTOB\033[1;34m).   [---]"+bcolors.RESET)
-        print("\033[1;34m[---]          Created by: \033[1;31mJMKTT\033[1;34m          [---]"+bcolors.RESET)
-        print("\033[1;34m[---]            Version: \033[1;31m 1.2 \033[0;0m \033[1;34m          [---] \n")
+        print("\033[1;34m[---]          Created by: {}\033[1;34m          [---]".format(cname)+bcolors.RESET)
+        print("\033[1;34m[---]            Version: \033[1;31m {} \033[0;0m \033[1;34m          [---] \n".format(version))
         print("\033[1;92m  Welcome to The Text Object Basic Crypt (TOB).\n"+bcolors.RESET)
-        print("\nSelect from menu:\n")
+        print("Select from menu:\n")
         print("1) CRYPT")
         print("2) DECRYPT")
         print("3) GEN KEY")
@@ -51,19 +45,8 @@ def main(i=0):
                         encrypted_char = chr(encrypt_code) # covert back to char
                         result += encrypted_char
                     return result
-                print("\n      .--------.")
-                print("     / .------. 1")
-                print("    / /        \ 1")
-                print("    | |        | |")
-                print("   _| |________| |_")
-                print(" .' |_|        |_| '.")
-                print(" '._____ ____ _____.'")
-                print(" |     .'____'.     |")
-                print(" '.__.'.'    '.'.__.'")
-                print(" '.__  | CTOB |  __.'")
-                print(" |   '.'.____.'.'   |")
-                print(" '.____'.____.'____.'")
-                print(" '.________________.'")
+
+                print(cript_banner)
                 if (invkey == 1):
                     print(invkey_text)
                 text = (input("\nInput Text: "))
@@ -76,9 +59,10 @@ def main(i=0):
                         os.system("cls")
                     else:
                         print("[!]UNIDENTIFIED OS")
-                    cript(ik=1)                
+                    cript(ik=1)        
+                print(key)        
                 encrypted_text = encrypt(text, key)
-                write(encrypted_text) #output in .txt
+                #write(encrypted_text) #output in .txt
                 print("\nEncrypted text:{0}".format(encrypted_text))
                 # CRIPT SUB MENU
                 def cript_menu(i=0):
@@ -115,21 +99,7 @@ def main(i=0):
                         decrypted_char = chr(decrypted_code) #covert back to char
                         result += decrypted_char
                     return result
-                print("\n      .--------.")
-                print("     / .------. 1")
-                print("    / /        \ 1")
-                print("    | |        | |")
-                print("    | |        | |")
-                print("    | |        --- ")
-                print("   _| |____________")
-                print(" .' |_|            '.")
-                print(" '._____ ____ _____.'")
-                print(" |     .'____'.     |")
-                print(" '.__.'.'    '.'.__.'")
-                print(" '.__  | DTOB |  __.'")
-                print(" |   '.'.____.'.'   |")
-                print(" '.____'.____.'____.'")
-                print(" '.________________.'")
+                print(decript_banner)
                 if (invkey == 1):
                     print(invkey_text)
                 text = (input("\nInput Text: "))

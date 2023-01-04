@@ -1,5 +1,6 @@
 import os
 import datetime
+from pystyle import Colors, Colorate, Write
 
 def check_os():
     if os.name == "nt": #windows
@@ -19,7 +20,53 @@ def write(encrypted_text):
     w.close()
 
 
+### banners
+menu_banner = '''
+   ooooooooooooo   .oooooo.   oooooooooo.
+   8'   888   `8  d8P'  `Y8b  `888'   `Y8b
+        888      888      888  888     888
+        888      888      888  888oooo888'
+        888      888      888  888    `88b
+        888      888      888  888    `88b
+        888      `88b    d88'  888    .88P
+       o888o      `Y8bood8P'  o888bood8P '''
 
+cript_banner='''
+      .--------.
+     / .------. 1
+    / /        \ 1
+    | |        | |
+   _| |________| |_
+ .' |_|        |_| '.
+ '._____ ____ _____.'
+ |     .'____'.     |
+ '.__.'.'    '.'.__.'
+ '.__  | CTOB |  __.'
+ |   '.'.____.'.'   |
+ '.____'.____.'____.'
+ '.________________.'
+'''
+
+decript_banner='''
+      .--------.
+     / .------. 1
+    / /        \ 1
+    | |        | |
+    | |        | |
+    | |        --- 
+   _| |____________
+ .' |_|            '.
+ '._____ ____ _____.'
+ |     .'____'.     |
+ '.__.'.'    '.'.__.'
+ '.__  | DTOB |  __.'
+ |   '.'.____.'.'   |
+ '.____'.____.'____.'
+ '.________________.'
+'''
+
+cname = Colorate.Horizontal(Colors.red_to_blue, "JMKTT",1)
+version= Colorate.Horizontal(Colors.red_to_blue, "1.2",1)
 ### invalid mansages
 invoption_text = ("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
 invkey_text = ("\n\033[;1m\x1b[31m This key is not valid...\033[0;0m")
