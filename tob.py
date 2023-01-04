@@ -1,7 +1,7 @@
 import os
 import random
 from src.core.tobcore import *
-from pystyle import Colors, Colorate, Write,Add
+from pystyle import Colors, Colorate, Write,Add,Box
 operating_system = check_os()
 
 def main(i=0):
@@ -19,6 +19,7 @@ def main(i=0):
         print("\033[1;34m[---]            Version: \033[1;31m {} \033[0;0m \033[1;34m          [---] \n".format(version))
         print(Colors.green,"Welcome to The Text Object Basic Crypt (TOB).\n"+bcolors.RESET)
         print("Select from menu:\n")
+
         print("1) CRYPT")
         print("2) DECRYPT")
         print("3) GEN KEY")
@@ -60,7 +61,7 @@ def main(i=0):
                     else:
                         print("[!]UNIDENTIFIED OS")
                     cript(ik=1)        
-                print(key)        
+                print("/n/n",key)        
                 encrypted_text = encrypt(text, key)
                 #write(encrypted_text) #output in .txt
                 print("\nEncrypted text:{0}".format(encrypted_text))
@@ -143,10 +144,8 @@ def main(i=0):
                 invoption = i
                 random.seed()
                 key = random.randrange(000000000000000000000000, 999999999999999999999999)
-                print(key_banner)
-                print("\033[1;32m\n       +--------------------------------------------+")
-                print(" \033[1;32m\n       |\033[0;0m  YOUR KEY IS : {}    \033[1;32m|\n".format(key))
-                print("       +--------------------------------------------+\033[0;0m\n")
+                print(Colorate.Horizontal(Colors.black_to_red,key_banner,1))
+                display_key_box(key)
                 print("\n1) Back")
                 print("2) ReGen")
                 print("\n99) Exit\n")

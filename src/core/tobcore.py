@@ -1,6 +1,6 @@
 import os
 import datetime
-from pystyle import Colors, Colorate, Write
+from pystyle import Colors, Colorate, Write,Box
 
 def check_os():
     if os.name == "nt": #windows
@@ -65,11 +65,16 @@ decript_banner='''
  '.________________.'
 '''
 key_banner='''
-              8 8 8 8                     ,ooo.     
-              8a8 8a8                    oP   ?b    
-             d888a888zzzzzzzzzzzzzzzzzzzz8     8b   
-              `ii^ii'                    ?o___oP'  
+          8 8 8 8                     ,ooo.     
+          8a8 8a8                    oP   ?b    
+         d888a888zzzzzzzzzzzzzzzzzzzz8     8b   
+          `ii^ii'                    ?o___oP'  
 '''
+def display_key_box(key):
+    key_box =Box.DoubleCube("     YOUR KEY IS : {}     ".format(key))
+    print("\n{}".format(key_box))
+
+
 tname = Colorate.Horizontal(Colors.yellow_to_red, "TOB",1)
 cname = Colorate.Horizontal(Colors.red_to_blue, "JMKTT",2)
 version= Colorate.Horizontal(Colors.red_to_blue, "1.2",2)
