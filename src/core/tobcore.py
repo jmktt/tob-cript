@@ -64,6 +64,12 @@ decript_banner='''
  '.____'.____.'____.'
  '.________________.'
 '''
+key_banner='''
+              8 8 8 8                     ,ooo.     
+              8a8 8a8                    oP   ?b    
+             d888a888zzzzzzzzzzzzzzzzzzzz8     8b   
+              `ii^ii'                    ?o___oP'  
+'''
 
 cname = Colorate.Horizontal(Colors.red_to_blue, "JMKTT",1)
 version= Colorate.Horizontal(Colors.red_to_blue, "1.2",1)

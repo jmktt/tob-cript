@@ -143,10 +143,7 @@ def main(i=0):
                 invoption = i
                 random.seed()
                 key = random.randrange(000000000000000000000000, 999999999999999999999999)
-                print("\033[1;97m\n\n              8 8 8 8                     ,ooo.     ")
-                print("              8a8 8a8                    oP   ?b    ")
-                print("             d888a888zzzzzzzzzzzzzzzzzzzz8     8b   ")
-                print("              `ii^ii'                    ?o___oP'   \033[0;0m")
+                print(key_banner)
                 print("\033[1;32m\n       +--------------------------------------------+")
                 print(" \033[1;32m\n       |\033[0;0m  YOUR KEY IS : {}    \033[1;32m|\n".format(key))
                 print("       +--------------------------------------------+\033[0;0m\n")
