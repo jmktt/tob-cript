@@ -1,6 +1,7 @@
 import os
 import datetime
-from pystyle import Colors, Colorate, Write,Box
+import time
+from pystyle import *
 
 def check_os():
     if os.name == "nt": #windows
@@ -79,5 +80,16 @@ tname = Colorate.Horizontal(Colors.yellow_to_red, "TOB",1)
 cname = Colorate.Horizontal(Colors.red_to_blue, "JMKTT",2)
 version= Colorate.Horizontal(Colors.red_to_blue, "1.2",2)
 ### invalid mansages
-invoption_text = ("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
-invkey_text = ("\n\033[;1m\x1b[31m This key is not valid...\033[0;0m")
+invoption_text = (Col.red+"\nThere is no such option...\033[0;0m\n")
+invkey_text = (Col.red+"\n This key is not valid...\033[0;0m")
+
+
+
+def loading_bar(iteration, total, prefix='', suffix='', decimals=0, length=100, fill=Colorate.Vertical(Colors.red_to_purple, "_",1)):
+    percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+    filled_length = int(length * iteration // total)
+    bar = fill * filled_length + ' ' * (length - filled_length)
+    print(f'\r{prefix} {bar} {percent}% {suffix}', end='\r')
+    # Print New Line on Complete
+    if iteration == total:
+        print()

@@ -1,7 +1,8 @@
 import os
 import random
 from src.core.tobcore import *
-from pystyle import Colors, Colorate, Write,Add,Box
+from pystyle import *
+import time
 operating_system = check_os()
 
 def main(i=0):
@@ -13,7 +14,7 @@ def main(i=0):
             os.system("cls")
         else:
             print("[!]UNIDENTIFIED OS")
-        print(Colorate.Vertical(Colors.red_to_yellow, "{}".format(menu_banner), 2))
+        print(Colorate.DiagonalBackwards(Colors.red_to_yellow, "{}".format(menu_banner), 2))
         print("\n\033[1;34m[---]    Text-Object Basic Cript ({}\033[1;34m).   [---]".format(tname)+bcolors.RESET)
         print("\033[1;34m[---]          Created by: {}\033[1;34m          [---]".format(cname)+bcolors.RESET)
         print("\033[1;34m[---]            Version: \033[1;31m {} \033[0;0m \033[1;34m          [---] \n".format(version))
@@ -39,15 +40,23 @@ def main(i=0):
                 invkey=ik
                 def encrypt(text, key):
                     result= ""
+                    l = len(text)
+                    i = 0
+                    loading_bar(i, l, prefix='a', suffix='', length=50)
                     for char in text:
                         char_code = ord(char) # get ascii value
                         key = key % 10000
                         encrypt_code = char_code + key
                         encrypted_char = chr(encrypt_code) # covert back to char
                         result += encrypted_char
+                        i += 1
+                        if i == l:
+                            loading_bar(i, l, prefix='', suffix='Complete', length=50)
+                        else:
+                            loading_bar(i, l, prefix='', suffix='', length=50)
                     return result
 
-                print(cript_banner)
+                print(Colorate.Vertical(Colors.purple_to_red,(cript_banner),2))
                 if (invkey == 1):
                     print(invkey_text)
                 text = (input("\nInput Text: "))
@@ -60,9 +69,9 @@ def main(i=0):
                         os.system("cls")
                     else:
                         print("[!]UNIDENTIFIED OS")
-                    cript(ik=1)        
-                print("/n/n",key)        
+                    cript(ik=1)            
                 encrypted_text = encrypt(text, key)
+                time.sleep(1)
                 #write(encrypted_text) #output in .txt
                 print("\nEncrypted text:{0}".format(encrypted_text))
                 # CRIPT SUB MENU
@@ -93,14 +102,22 @@ def main(i=0):
                 invkey=ik
                 def decrypt(text, key):
                     result = ""
+                    l = len(text)
+                    i = 0
+                    loading_bar(i, l, prefix='a', suffix='', length=50)
                     for char in text:
                         char_code = ord(char) #get ascii value
                         key = key % 10000
                         decrypted_code = char_code - key 
                         decrypted_char = chr(decrypted_code) #covert back to char
                         result += decrypted_char
+                        i += 1
+                        if i == l:
+                            loading_bar(i, l, prefix='', suffix='Complete', length=50)
+                        else:
+                            loading_bar(i, l, prefix='', suffix='', length=50)
                     return result
-                print(decript_banner)
+                print(Colorate.Vertical(Colors.purple_to_red,(decript_banner),2))
                 if (invkey == 1):
                     print(invkey_text)
                 text = (input("\nInput Text: "))
