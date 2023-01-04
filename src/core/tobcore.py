@@ -71,8 +71,8 @@ key_banner='''
               `ii^ii'                    ?o___oP'  
 '''
 tname = Colorate.Horizontal(Colors.yellow_to_red, "TOB",1)
-cname = Colorate.Horizontal(Colors.red_to_blue, "JMKTT",1)
-version= Colorate.Horizontal(Colors.red_to_blue, "1.2",1)
+cname = Colorate.Horizontal(Colors.red_to_blue, "JMKTT",2)
+version= Colorate.Horizontal(Colors.red_to_blue, "1.2",2)
 ### invalid mansages
 invoption_text = ("\n\033[;1m\x1b[31m There is no such option...\033[0;0m\n")
 invkey_text = ("\n\033[;1m\x1b[31m This key is not valid...\033[0;0m")
