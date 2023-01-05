@@ -1,6 +1,5 @@
 import os
 import datetime
-import time
 from pystyle import *
 
 def check_os():
@@ -23,7 +22,7 @@ def write(encrypted_text):
 
 ### banners
 menu_banner = '''
-   ooooooooooooo   .oooooo.   oooooooooo.
+    ooooooooooooo   .oooooo.   oooooooooo.
    8'   888   `8  d8P'  `Y8b  `888'   `Y8b
         888      888      888  888     888
         888      888      888  888oooo888'

@@ -53,7 +53,7 @@ def main(i=0):
                         print("[!]UNIDENTIFIED OS")
                     cript(ik=1)            
                 encrypted_text = encrypt(text, key)
-                #write(encrypted_text) #output in .txt
+                write(encrypted_text) #output in .txt
                 print("\nEncrypted text:{0}".format(encrypted_text))
                 # CRIPT SUB MENU
                 def cript_menu(i=0):

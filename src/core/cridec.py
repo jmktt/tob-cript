@@ -1,10 +1,10 @@
 from src.core.tobcore import *
+import time
 #cript function
 def encrypt(text, key):
     result= ""
     l = len(text)
     i = 0
-    loading_bar(i, l, prefix='a', suffix='', length=50)
     for char in text:
         char_code = ord(char) # get ascii value
         key = key % 10000
@@ -23,7 +23,6 @@ def decrypt(text, key):
     result = ""
     l = len(text)
     i = 0
-    loading_bar(i, l, prefix='a', suffix='', length=50)
     for char in text:
         char_code = ord(char)
         key = key % 10000
