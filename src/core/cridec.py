@@ -1,5 +1,5 @@
 from src.core.tobcore import *
-import time
+
 #cript function
 def encrypt(text, key):
     result= ""
