@@ -3,17 +3,11 @@ import random
 from src.core.tobcore import *
 from src.core.cridec import *
 from pystyle import *
-operating_system = check_os()
 
 def main(i=0):
     try:
         invoption = i
-        if (operating_system == "1"):
-            os.system("clear")
-        elif (operating_system == "0"):
-            os.system("cls")
-        else:
-            print("[!]UNIDENTIFIED OS")
+        disp_clean
         print(Colorate.DiagonalBackwards(Colors.red_to_yellow, "{}".format(menu_banner), 2))
         print("\n\033[1;34m[---]    Text-Object Basic Cript ({}\033[1;34m).   [---]".format(tname)+bcolors.RESET)
         print("\033[1;34m[---]          Created by: {}\033[1;34m          [---]".format(cname)+bcolors.RESET)
@@ -30,12 +24,7 @@ def main(i=0):
         option = (input("\nSelect: "))
         if (option == '1'):
         # option 1 - CRIPT
-            if (operating_system == "1"):
-                os.system("clear")
-            elif (operating_system == "0"):
-                os.system("cls")
-            else:
-                print("[!]UNIDENTIFIED OS")
+            disp_clean
             def cript(ik=0):
                 invkey=ik
                 print(Colorate.Vertical(Colors.purple_to_red,(cript_banner),2))
@@ -45,12 +34,7 @@ def main(i=0):
                 try:
                     key = int(input("Input your KEY: "))
                 except Exception as e:
-                    if (operating_system == "1"):
-                        os.system("clear")
-                    elif (operating_system == "0"):
-                        os.system("cls")
-                    else:
-                        print("[!]UNIDENTIFIED OS")
+                    disp_clean
                     cript(ik=1)            
                 encrypted_text = encrypt(text, key)
                 write(encrypted_text) #output in .txt
@@ -74,12 +58,7 @@ def main(i=0):
         elif (option == '2'):
         # option 2 - DECRIPT
             def decript(ik=0):
-                if (operating_system == "1"):
-                    os.system("clear")
-                elif (operating_system == "0"):
-                    os.system("cls")
-                else:
-                    print("[!]UNIDENTIFIED OS")
+                disp_clean
                 invkey=ik
                 print(Colorate.Vertical(Colors.purple_to_red,(decript_banner),2))
                 if (invkey == 1):
@@ -88,12 +67,7 @@ def main(i=0):
                 try:
                     key = int(input("Input your KEY: "))
                 except Exception as e:
-                    if (operating_system == "1"):
-                        os.system("clear")
-                    elif (operating_system == "0"):
-                        os.system("cls")
-                    else:
-                        print("[!]UNIDENTIFIED OS")
+                    disp_clean
                     decript(ik=1)                           
                 decrypted_text = decrypt(text, key)
                 print("\nDecrypted text:{0}".format(decrypted_text))
@@ -116,12 +90,7 @@ def main(i=0):
         elif (option =='3'):
         # option 3 - GENERATE KEY
             def gen_key(i=0):
-                if (operating_system == "1"):
-                    os.system("clear")
-                elif (operating_system == "0"):
-                    os.system("cls")
-                else:
-                    print("[!]UNIDENTIFIED OS")
+                disp_clean
                 invoption = i
                 random.seed()
                 key = random.randrange(000000000000000000000000, 999999999999999999999999)

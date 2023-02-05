@@ -9,6 +9,15 @@ def check_os():
         operating_system = "1"
     return(operating_system)
 
+operating_system = check_os()
+def disp_clean():
+    if (operating_system == "1"):
+        os.system("clear")
+    elif (operating_system == "0"):
+        os.system("cls")
+    else:
+        print("[!]UNIDENTIFIED OS")
+        
 class bcolors:
     YELLOW = '\033[1;33m'
     RESET = '\033[0;0m'
