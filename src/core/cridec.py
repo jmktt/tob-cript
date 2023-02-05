@@ -1,4 +1,12 @@
 from src.core.tobcore import *
+import hashlib
+
+
+#def hashcript(result):
+#    md5 = hashlib.md5()
+#    md5.update(result.encode('utf-8'))
+#    return md5.hexdigest()
+
 
 #cript function
 def encrypt(text, key):
@@ -16,6 +24,7 @@ def encrypt(text, key):
             loading_bar(i, l, prefix='', suffix='Complete', length=50)
         else:
             loading_bar(i, l, prefix='', suffix='', length=50)
+        #result += hashcript(result)
     return result
 
 #decrypt function
