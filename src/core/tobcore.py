@@ -24,7 +24,7 @@ class bcolors:
 
 now = datetime.datetime.now()
 def write(encrypted_text):
-    w = open("criptout.txt", "a")
+    w = open("criptout.txt", "a",encoding="utf-8")
     w.write("\n Cript Text({0}): {1}".format(now,encrypted_text))
     w.close()
 

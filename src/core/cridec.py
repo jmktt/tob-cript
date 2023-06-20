@@ -1,12 +1,4 @@
 from src.core.tobcore import *
-import hashlib
-
-
-#def hashcript(result):
-#    md5 = hashlib.md5()
-#    md5.update(result.encode('utf-8'))
-#    return md5.hexdigest()
-
 
 #cript function
 def encrypt(text, key):
