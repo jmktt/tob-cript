@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import random
 from src.core.tobcore import *
 from src.core.cridec import *
