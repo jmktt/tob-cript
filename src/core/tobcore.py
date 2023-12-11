@@ -24,9 +24,9 @@ class bcolors:
 
 now = datetime.datetime.now()
 def write(encrypted_text):
-    w = open("criptout.txt", "a",encoding="utf-8")
-    w.write("\n Cript Text({0}): {1}".format(now,encrypted_text))
-    w.close()
+    file = open("criptout.txt", "a",encoding="utf-8")
+    file.write("\n Cript Text({0}): {1}".format(now,encrypted_text))
+    file.close()
 
 
 ### banners
@@ -102,3 +102,5 @@ def loading_bar(iteration, total, prefix='', suffix='', decimals=0, length=100, 
     # Print New Line on Complete
     if iteration == total:
         print()
+
+#Author JMCG

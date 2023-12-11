@@ -36,3 +36,5 @@ def decrypt(text, key):
         else:
             loading_bar(i, l, prefix='', suffix='', length=50)
     return result
+
+#Author JMCG
