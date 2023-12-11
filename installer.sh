@@ -42,7 +42,6 @@ if [ -e /usr/bin/tob-cript/tob ]; then
     echo -e "${YELLOW}[*] Link ${NC}'tob'${YELLOW} already exists."
 else
     ln -s /usr/bin/tob-cript/tob.py /usr/bin/tob-cript/tob
-    ln -s /usr/bin/tob-cript/tob.py /usr/bin/tob-cript/sklir
     echo -e "${GREEN}[*] Link ${NC}'tob' ${GREEN}created."
 fi
 
