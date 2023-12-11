@@ -1,7 +1,7 @@
 ## Text-Object Basic Cript Project
 
 <p align="center">
-  <img src=".github/frame.png">
+  <img src=".github/banner.png">
 </p>
 
 TOB is software that allows users to securely and efficiently encrypt and decrypt text. The following is a summary of how this program can work:
