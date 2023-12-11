@@ -25,30 +25,58 @@ def main(i=0):
         option = (input("\nSelect: "))
         if (option == '1'):
         # option 1 - CRIPT
-            disp_clean()
+# option 1 - CRIPT
             def cript(ik=0):
-                invkey=ik
-                print(Colorate.Vertical(Colors.purple_to_red,(cript_banner),2))
-                if (invkey == 1):
+                invkey = ik
+                print(Colorate.Vertical(Colors.purple_to_red, cript_banner, 2))
+                
+                if invkey == 1:
                     print(invkey_text)
-                text = (input("\nInput Text: "))
-                while True: ## invalid key looping
+            
+                print("\nOptions:")
+                print("1) Input text manually")
+                print("2) Read text from file")
+            
+                choice = input("Choose an option: ")
+            
+                if choice == '1':
+                    text = input("\nInput Text: ")
+                elif choice == '2':
+                    try:
+                        filename = input("Enter the filename: ")
+                        with open(filename, 'r', encoding='utf-8') as file:
+                            text = file.read()
+                    except FileNotFoundError:
+                        disp_clean()
+                        print("Error: File not found.")
+                        cript(ik=1)
+                else:
+                    disp_clean()
+                    print("Error: Invalid option.")
+                    cript(ik=1)
+                    return
+            
+                while True:  # invalid key looping
                     try:
                         key = int(input("Input your KEY: "))
                         min_valid_key = secrets.randbelow(999999999999999999999999)
-
+            
                         if len(str(key)) == len(str(min_valid_key)):
                             break
                         else:
                             disp_clean()
-                            print(Colorate.Vertical(Colors.purple_to_red,(cript_banner),2))
-                            print(invkey_text,"\n")
+                            print(Colorate.Vertical(Colors.purple_to_red, cript_banner, 2))
+                            print(invkey_text, "\n")
                     except Exception as e:
                         disp_clean()
-                        cript(ik=1)            
+                        cript(ik=1)
+            
                 encrypted_text = encrypt(text, key)
-                write(encrypted_text) #output in .txt
-                print("\nEncrypted text:{0}".format(encrypted_text))
+                write(encrypted_text)  # output in .txt
+                print("\nEncrypted text: {0}".format(encrypted_text))
+            
+            
+
                 # CRIPT SUB MENU
                 def cript_menu(i=0):
                     invoption=i
