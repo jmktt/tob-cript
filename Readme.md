@@ -1,4 +1,8 @@
-## Text-Object Basic Cript Project
+## Text-Object Basic Cript Project - Sklir
+
+<p align="center">
+  <img src=".github/frame.png">
+</p>
 
 TOB is software that allows users to securely and efficiently encrypt and decrypt text. The following is a summary of how this program can work:
 
