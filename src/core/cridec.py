@@ -8,7 +8,7 @@ def encrypt(text, key):
     for char in text:
         char_code = ord(char) # get ascii value
         key = key % 10000
-        encrypt_code = char_code + key
+        encrypt_code = (char_code + key)
         encrypted_char = chr(encrypt_code) # covert back to char
         result += encrypted_char
         i += 1

@@ -87,6 +87,7 @@ def display_key_box(key):
 tname = Colorate.Horizontal(Colors.yellow_to_red, "TOB",1)
 cname = Colorate.Horizontal(Colors.red_to_blue, "JMKTT",2)
 version= Colorate.Horizontal(Colors.red_to_blue, "1.2",2)
+
 ### invalid mansages
 invoption_text = (Col.red+"\nThere is no such option...\033[0;0m\n")
 invkey_text = (Col.red+"\n This key is not valid...\033[0;0m")

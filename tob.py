@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import random
+import secrets
 from src.core.tobcore import *
 from src.core.cridec import *
 from pystyle import *
@@ -32,11 +32,20 @@ def main(i=0):
                 if (invkey == 1):
                     print(invkey_text)
                 text = (input("\nInput Text: "))
-                try:
-                    key = int(input("Input your KEY: "))
-                except Exception as e:
-                    disp_clean()
-                    cript(ik=1)            
+                while True: ## invalid key looping
+                    try:
+                        key = int(input("Input your KEY: "))
+                        min_valid_key = secrets.randbelow(999999999999999999999999)
+
+                        if len(str(key)) == len(str(min_valid_key)):
+                            break
+                        else:
+                            disp_clean()
+                            print(Colorate.Vertical(Colors.purple_to_red,(cript_banner),2))
+                            print(invkey_text,"\n")
+                    except Exception as e:
+                        disp_clean()
+                        cript(ik=1)            
                 encrypted_text = encrypt(text, key)
                 write(encrypted_text) #output in .txt
                 print("\nEncrypted text:{0}".format(encrypted_text))
@@ -65,11 +74,20 @@ def main(i=0):
                 if (invkey == 1):
                     print(invkey_text)
                 text = (input("\nInput Text: "))
-                try:
-                    key = int(input("Input your KEY: "))
-                except Exception as e:
-                    disp_clean()
-                    decript(ik=1)                           
+                while True: ## invalid key looping
+                    try:
+                        key = int(input("Input your KEY: "))
+                        min_valid_key = secrets.randbelow(999999999999999999999999)
+
+                        if len(str(key)) == len(str(min_valid_key)):
+                            break
+                        else:
+                            disp_clean()
+                            print(Colorate.Vertical(Colors.purple_to_red,(cript_banner),2))
+                            print(invkey_text,"\n")
+                    except Exception as e:
+                        disp_clean()
+                        decript(ik=1)                           
                 decrypted_text = decrypt(text, key)
                 print("\nDecrypted text:{0}".format(decrypted_text))
                 # DECRIPT SUB MENU
@@ -93,8 +111,7 @@ def main(i=0):
             def gen_key(i=0):
                 disp_clean()
                 invoption = i
-                random.seed()
-                key = random.randrange(000000000000000000000000, 999999999999999999999999)
+                key = secrets.randbelow(999999999999999999999999)
                 print(Colorate.Horizontal(Colors.black_to_red,key_banner,1))
                 display_key_box(key)
                 print("\n1) Back")
