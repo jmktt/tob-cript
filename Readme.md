@@ -1,4 +1,4 @@
-## Text-Object Basic Cript Project - Sklir
+## Text-Object Basic Cript Project
 
 <p align="center">
   <img src=".github/frame.png">
