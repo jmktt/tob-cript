@@ -8,7 +8,7 @@ NC='\033[0m'  # no color
 
 # verify root
 if [[ $EUID -ne 0 ]]; then
-    echo -e "${RED}This script needs to be run as root. Run with sudo.${NC}"
+    echo -e "${RED}[*] This script needs to be run as root. Run with sudo.${NC}"
     exit 1
 fi
 
@@ -22,14 +22,14 @@ INSTALL_DIR="/usr/bin/tob-cript"
 if [ -d "$INSTALL_DIR" ]; then
     # remove dir
     rm -rf "$INSTALL_DIR"
-    echo -e "${GREEN}Text-Object Basic Cript files were deleted.${NC}"
+    echo -e "${GREEN}[*] Text-Object Basic Cript files were deleted.${NC}"
 else
-    echo -e "${YELLOW}Text-Object Basic Cript files not found. Nothing to uninstall.${NC}"
+    echo -e "${YELLOW}[!] Text-Object Basic Cript files not found. Nothing to uninstall.${NC}"
 fi
 
 # remove .bashrc
 sed -i '/tob-cript/d' "$HOME/.bashrc"
 
-echo -e "${GREEN}Uninstallation complete.${NC}"
+echo -e "${GREEN}[!] Uninstallation complete.${NC}"
 
 exit 0
