@@ -13,7 +13,7 @@ def main(i=0):
         print("\n\033[1;34m[---]    Text-Object Basic Cript ({}\033[1;34m).   [---]".format(tname)+bcolors.RESET)
         print("\033[1;34m[---]          Created by: {}\033[1;34m          [---]".format(cname)+bcolors.RESET)
         print("\033[1;34m[---]            Version: \033[1;31m {} \033[0;0m \033[1;34m          [---] \n".format(version))
-        print(Colors.green,"Welcome to The Text Object Basic Crypt (TOB).\n"+bcolors.RESET)
+        print(Colors.green,"Welcome to The Text Object Basic Crypt (TOB/Sklir).\n"+bcolors.RESET)
         print("Select from menu:\n")
 
         print("1) CRYPT")
