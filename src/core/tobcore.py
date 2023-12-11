@@ -10,6 +10,8 @@ def check_os():
         operating_system = "1"
     return(operating_system)
 
+##def check_update():
+
 def check_status():
     url = "https://api.github.com"
     try:
