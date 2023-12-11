@@ -1,5 +1,6 @@
 import os
 import datetime
+import requests
 from pystyle import *
 
 def check_os():
@@ -8,6 +9,16 @@ def check_os():
     if os.name == "posix": #unix
         operating_system = "1"
     return(operating_system)
+
+def check_status():
+    url = "https://api.github.com"
+    try:
+        response = requests.head(url, timeout=3)
+        response.raise_for_status()
+        print((bcolors.YELLOW+"Internet Status: Online"+bcolors.RESET))
+        #check_update()
+    except requests.RequestException:
+        print((bcolors.YELLOW+"Internet Status: Offline"+bcolors.RESET))
 
 operating_system = check_os()
 def disp_clean():

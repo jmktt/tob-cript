@@ -8,7 +8,7 @@ def encrypt(text, key):
     for char in text:
         char_code = ord(char) # get ascii value
         key = key % 10000
-        encrypt_code = (char_code + key)
+        encrypt_code = (char_code + key) % 0x110000 #range(0x110000) unicode
         encrypted_char = chr(encrypt_code) # covert back to char
         result += encrypted_char
         i += 1
@@ -27,7 +27,7 @@ def decrypt(text, key):
     for char in text:
         char_code = ord(char)
         key = key % 10000
-        decrypted_code = char_code - key 
+        decrypted_code = (char_code - key) % 0x110000 #range(0x110000) unicode
         decrypted_char = chr(decrypted_code) #covert back to char
         result += decrypted_char
         i += 1

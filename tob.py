@@ -94,30 +94,56 @@ def main(i=0):
                 cript_menu()
             cript()
         elif (option == '2'):
-        # option 2 - DECRIPT
+            # option 2 - DECRYPT
             def decript(ik=0):
                 disp_clean()
-                invkey=ik
-                print(Colorate.Vertical(Colors.purple_to_red,(decript_banner),2))
-                if (invkey == 1):
+                invkey = ik
+                print(Colorate.Vertical(Colors.purple_to_red, decript_banner, 2))
+                
+                if invkey == 1:
                     print(invkey_text)
-                text = (input("\nInput Text: "))
-                while True: ## invalid key looping
+                
+                print("\nOptions:")
+                print("1) Input text manually")
+                print("2) Read text from file")
+                
+                choice = input("Choose an option: ")
+                
+                if choice == '1':
+                    text = input("\nInput Text: ")
+                elif choice == '2':
+                    try:
+                        filename = input("Enter the filename: ")
+                        with open(filename, 'r', encoding='utf-8') as file:
+                            text = file.read()
+                    except FileNotFoundError:
+                        disp_clean()
+                        print("Error: File not found.")
+                        decript(ik=0)
+                else:
+                    disp_clean()
+                    print("Error: Invalid option.")
+                    decrypt(ik=0)
+                    return
+                
+                while True:  # invalid key looping
                     try:
                         key = int(input("Input your KEY: "))
                         min_valid_key = secrets.randbelow(999999999999999999999999)
-
+                        
                         if len(str(key)) == len(str(min_valid_key)):
                             break
                         else:
                             disp_clean()
-                            print(Colorate.Vertical(Colors.purple_to_red,(cript_banner),2))
-                            print(invkey_text,"\n")
+                            print(Colorate.Vertical(Colors.purple_to_red, decript_banner, 2))
+                            print(invkey_text, "\n")
                     except Exception as e:
                         disp_clean()
-                        decript(ik=1)                           
+                        decript(ik=1)
+                
                 decrypted_text = decrypt(text, key)
-                print("\nDecrypted text:{0}".format(decrypted_text))
+                print("\nDecrypted text: {0}".format(decrypted_text))
+            
                 # DECRIPT SUB MENU
                 def decript_menu(i=0):
                     invoption=i
@@ -168,6 +194,7 @@ def main(i=0):
         print("\n[!] Something went wrong. Printing the error: {0}".format(e))
 
 #---------------------# start
+check_status()
 main() 
 
 #Author JMCG
