@@ -32,6 +32,8 @@ def main(i=0):
                 
                 if invkey == 1:
                     print(invkey_text)
+                if invkey == 2:
+                    print(invoption_text)
             
                 print("\nOptions:")
                 print("1) Input text manually")
@@ -52,8 +54,7 @@ def main(i=0):
                         cript(ik=1)
                 else:
                     disp_clean()
-                    print("Error: Invalid option.")
-                    cript(ik=1)
+                    cript(ik=2)
                     return
             
                 while True:  # invalid key looping
@@ -102,6 +103,8 @@ def main(i=0):
                 
                 if invkey == 1:
                     print(invkey_text)
+                if invkey == 2:
+                    print(invoption_text)
                 
                 print("\nOptions:")
                 print("1) Input text manually")
@@ -122,8 +125,7 @@ def main(i=0):
                         decript(ik=0)
                 else:
                     disp_clean()
-                    print("Error: Invalid option.")
-                    decrypt(ik=0)
+                    decript(ik=2)
                     return
                 
                 while True:  # invalid key looping
