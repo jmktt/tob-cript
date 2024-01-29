@@ -34,6 +34,8 @@ def main(i=0):
                     print(invkey_text)
                 if invkey == 2:
                     print(invoption_text)
+                if invkey == 3:
+                    print(invfile_text)
             
                 print("\nOptions:")
                 print("1) Input text manually")
@@ -50,8 +52,7 @@ def main(i=0):
                             text = file.read()
                     except FileNotFoundError:
                         disp_clean()
-                        print("Error: File not found.")
-                        cript(ik=1)
+                        cript(ik=3)
                 else:
                     disp_clean()
                     cript(ik=2)
@@ -105,6 +106,8 @@ def main(i=0):
                     print(invkey_text)
                 if invkey == 2:
                     print(invoption_text)
+                if invkey == 3:
+                    print(invfile_text)
                 
                 print("\nOptions:")
                 print("1) Input text manually")
@@ -121,8 +124,7 @@ def main(i=0):
                             text = file.read()
                     except FileNotFoundError:
                         disp_clean()
-                        print("Error: File not found.")
-                        decript(ik=0)
+                        decript(ik=3)
                 else:
                     disp_clean()
                     decript(ik=2)

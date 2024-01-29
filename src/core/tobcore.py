@@ -104,6 +104,7 @@ version= Colorate.Horizontal(Colors.red_to_blue, "1.2",2)
 ### invalid mansages
 invoption_text = (Col.red+"\nThere is no such option...\033[0;0m\n")
 invkey_text = (Col.red+"\n This key is not valid...\033[0;0m")
+invfile_text = (Col.red+"\n File not found...\033[0;0m")
 
 
 
