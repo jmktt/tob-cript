@@ -27,6 +27,7 @@ def main(i=0):
         # option 1 - CRIPT
 # option 1 - CRIPT
             def cript(ik=0):
+                disp_clean()
                 invkey = ik
                 print(Colorate.Vertical(Colors.purple_to_red, cript_banner, 2))
                 
