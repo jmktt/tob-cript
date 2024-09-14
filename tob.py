@@ -268,7 +268,7 @@ def main(i=0):
 ##########################         
         elif option == '99'or option == 'exit' or option == 'quit':
             print(bye_message)
-        elif option == "john":
+        elif option == "john" or option == "jm":
             print(Colorate.Vertical(Colors.red_to_black, john, 2))
             credit_text()
             wait = input("\nPress Enter to back to main menu.")
