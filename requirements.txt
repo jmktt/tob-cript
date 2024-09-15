@@ -1,3 +1,4 @@
 pystyle
+requests
 mnemonic
-pycryptodome
+bip32utils
