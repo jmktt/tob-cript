@@ -73,6 +73,7 @@ def keys():
         
         print("\n\033[1;90mBIP32 Root Key (xprv):\033[0m")
         print("\033[1;97m%s\033[0m" % xprv)
+        
     
     except Exception as e:
         print(f"An error occurred: {e}")

@@ -255,6 +255,7 @@ def main(i=0):
                         option = (input("\n\033[4mtob\033[0m> "))
                         if (option == '1'):
                             bip()
+                            return
                         if (option == "2"):
                             bip_menu()
                         elif option == '99'or option == 'exit' or option == 'quit':
