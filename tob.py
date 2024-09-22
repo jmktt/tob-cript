@@ -5,13 +5,15 @@ import string
 from src.core.tobcore import *
 from src.core.cridec import *
 from pystyle import *
+import random
 
 
 def main(i=0):
     try:
         invoption = i
         disp_clean()
-        print(Colorate.DiagonalBackwards(Colors.red_to_yellow, "{}".format(menu_banner), 2))
+        selected_banner = random.choice(banners)
+        print(Colorate.DiagonalBackwards(Colors.yellow_to_red, "{}".format(selected_banner), 2))
         print("\n\033[1;34m[---]    Text-Object Basic Cript ({}\033[1;34m).   [---]".format(tname)+bcolors.RESET)
         print("\033[1;34m[---]          Created by: {}\033[1;34m          [---]".format(cname)+bcolors.RESET)
         print("\033[1;34m[---]            Version: \033[1;31m {} \033[0;0m \033[1;34m          [---] \n".format(version))
